@@ -3,27 +3,52 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DA99B5B2629B06C0073322E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B5A2629B06C0073322E /* UIViewExtensions.swift */; };
+		5DA99B5E2629C0160073322E /* SingleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B5D2629C0160073322E /* SingleSection.swift */; };
+		5DA99B612629C2680073322E /* UITableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B602629C2680073322E /* UITableViewDiffableDataSource.swift */; };
+		5DA99B682629C47F0073322E /* TodoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B672629C47F0073322E /* TodoListService.swift */; };
+		5DA99B6D2629E2CC0073322E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B6C2629E2CC0073322E /* AppEnvironment.swift */; };
 		5DAFFBEC26298EC500648A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBEB26298EC500648A22 /* AppDelegate.swift */; };
 		5DAFFBEE26298EC500648A22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBED26298EC500648A22 /* SceneDelegate.swift */; };
-		5DAFFBF026298EC500648A22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBEF26298EC500648A22 /* ViewController.swift */; };
-		5DAFFBF326298EC500648A22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFFBF126298EC500648A22 /* Main.storyboard */; };
+		5DAFFBF026298EC500648A22 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBEF26298EC500648A22 /* TodoListViewController.swift */; };
 		5DAFFBF526298EC700648A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFFBF426298EC700648A22 /* Assets.xcassets */; };
 		5DAFFBF826298EC700648A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DAFFBF626298EC700648A22 /* LaunchScreen.storyboard */; };
+		5DAFFC022629902100648A22 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5DAFFC012629902100648A22 /* ComposableArchitecture */; };
+		5DAFFC062629931000648A22 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC052629931000648A22 /* MainNavigationController.swift */; };
+		5DAFFC112629956500648A22 /* TodoListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC102629956500648A22 /* TodoListStore.swift */; };
+		5DAFFC1526299AEC00648A22 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC1426299AEC00648A22 /* Todo.swift */; };
+		5DAFFC1926299B2F00648A22 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC1826299B2F00648A22 /* TodoListView.swift */; };
+		5DAFFC1C2629A2DE00648A22 /* TodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC1B2629A2DE00648A22 /* TodoTableViewCell.swift */; };
+		5DAFFC272629AC3D00648A22 /* BindableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC262629AC3D00648A22 /* BindableCell.swift */; };
+		5DAFFC2A2629AC7000648A22 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC292629AC7000648A22 /* Reusable.swift */; };
+		5DAFFC322629AF0600648A22 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFC312629AF0600648A22 /* ViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5DA99B5A2629B06C0073322E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		5DA99B5D2629C0160073322E /* SingleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSection.swift; sourceTree = "<group>"; };
+		5DA99B602629C2680073322E /* UITableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDiffableDataSource.swift; sourceTree = "<group>"; };
+		5DA99B672629C47F0073322E /* TodoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListService.swift; sourceTree = "<group>"; };
+		5DA99B6C2629E2CC0073322E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		5DAFFBE826298EC500648A22 /* TCA+CombineOnboardindTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA+CombineOnboardindTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAFFBEB26298EC500648A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAFFBED26298EC500648A22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DAFFBEF26298EC500648A22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5DAFFBF226298EC500648A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DAFFBEF26298EC500648A22 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		5DAFFBF426298EC700648A22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DAFFBF726298EC700648A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DAFFBF926298EC700648A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DAFFC052629931000648A22 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		5DAFFC102629956500648A22 /* TodoListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListStore.swift; sourceTree = "<group>"; };
+		5DAFFC1426299AEC00648A22 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		5DAFFC1826299B2F00648A22 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		5DAFFC1B2629A2DE00648A22 /* TodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewCell.swift; sourceTree = "<group>"; };
+		5DAFFC262629AC3D00648A22 /* BindableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableCell.swift; sourceTree = "<group>"; };
+		5DAFFC292629AC7000648A22 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		5DAFFC312629AF0600648A22 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,12 +56,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DAFFC022629902100648A22 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DA99B662629C4510073322E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5DA99B672629C47F0073322E /* TodoListService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5DAFFBDF26298EC500648A22 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +90,99 @@
 		5DAFFBEA26298EC500648A22 /* TCA+CombineOnboardindTask */ = {
 			isa = PBXGroup;
 			children = (
-				5DAFFBEB26298EC500648A22 /* AppDelegate.swift */,
-				5DAFFBED26298EC500648A22 /* SceneDelegate.swift */,
-				5DAFFBEF26298EC500648A22 /* ViewController.swift */,
-				5DAFFBF126298EC500648A22 /* Main.storyboard */,
-				5DAFFBF426298EC700648A22 /* Assets.xcassets */,
-				5DAFFBF626298EC700648A22 /* LaunchScreen.storyboard */,
+				5DAFFC0D2629940E00648A22 /* App */,
+				5DAFFC1326299ADC00648A22 /* Models */,
+				5DA99B662629C4510073322E /* Services */,
+				5DAFFC09262993B500648A22 /* TodoList */,
+				5DAFFC2C2629AD4600648A22 /* Library */,
+				5DAFFC2F2629AD8100648A22 /* Resources */,
 				5DAFFBF926298EC700648A22 /* Info.plist */,
 			);
 			path = "TCA+CombineOnboardindTask";
+			sourceTree = "<group>";
+		};
+		5DAFFC09262993B500648A22 /* TodoList */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFC0C262993FB00648A22 /* Views */,
+				5DAFFC0B262993DB00648A22 /* Store */,
+				5DAFFBEF26298EC500648A22 /* TodoListViewController.swift */,
+				5DAFFC052629931000648A22 /* MainNavigationController.swift */,
+			);
+			path = TodoList;
+			sourceTree = "<group>";
+		};
+		5DAFFC0B262993DB00648A22 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFC102629956500648A22 /* TodoListStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		5DAFFC0C262993FB00648A22 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFC1B2629A2DE00648A22 /* TodoTableViewCell.swift */,
+				5DAFFC1826299B2F00648A22 /* TodoListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5DAFFC0D2629940E00648A22 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFBEB26298EC500648A22 /* AppDelegate.swift */,
+				5DAFFBED26298EC500648A22 /* SceneDelegate.swift */,
+				5DA99B6C2629E2CC0073322E /* AppEnvironment.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5DAFFC1326299ADC00648A22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFC1426299AEC00648A22 /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5DAFFC2C2629AD4600648A22 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFC2E2629AD5200648A22 /* Extensions */,
+				5DAFFC2D2629AD4A00648A22 /* Protocols */,
+				5DAFFC312629AF0600648A22 /* ViewRepresentable.swift */,
+				5DA99B5D2629C0160073322E /* SingleSection.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		5DAFFC2D2629AD4A00648A22 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFC262629AC3D00648A22 /* BindableCell.swift */,
+				5DAFFC292629AC7000648A22 /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5DAFFC2E2629AD5200648A22 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DA99B5A2629B06C0073322E /* UIViewExtensions.swift */,
+				5DA99B602629C2680073322E /* UITableViewDiffableDataSource.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5DAFFC2F2629AD8100648A22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DAFFBF626298EC700648A22 /* LaunchScreen.storyboard */,
+				5DAFFBF426298EC700648A22 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +201,9 @@
 			dependencies = (
 			);
 			name = "TCA+CombineOnboardindTask";
+			packageProductDependencies = (
+				5DAFFC012629902100648A22 /* ComposableArchitecture */,
+			);
 			productName = "TCA+CombineOnboardindTask";
 			productReference = 5DAFFBE826298EC500648A22 /* TCA+CombineOnboardindTask.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 5DAFFBDF26298EC500648A22;
+			packageReferences = (
+				5DAFFC002629902100648A22 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 5DAFFBE926298EC500648A22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +250,6 @@
 			files = (
 				5DAFFBF826298EC700648A22 /* LaunchScreen.storyboard in Resources */,
 				5DAFFBF526298EC700648A22 /* Assets.xcassets in Resources */,
-				5DAFFBF326298EC500648A22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +260,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DAFFBF026298EC500648A22 /* ViewController.swift in Sources */,
+				5DAFFC272629AC3D00648A22 /* BindableCell.swift in Sources */,
+				5DAFFBF026298EC500648A22 /* TodoListViewController.swift in Sources */,
+				5DAFFC1526299AEC00648A22 /* Todo.swift in Sources */,
+				5DAFFC1C2629A2DE00648A22 /* TodoTableViewCell.swift in Sources */,
+				5DAFFC2A2629AC7000648A22 /* Reusable.swift in Sources */,
+				5DAFFC322629AF0600648A22 /* ViewRepresentable.swift in Sources */,
+				5DA99B6D2629E2CC0073322E /* AppEnvironment.swift in Sources */,
 				5DAFFBEC26298EC500648A22 /* AppDelegate.swift in Sources */,
+				5DAFFC112629956500648A22 /* TodoListStore.swift in Sources */,
+				5DAFFC1926299B2F00648A22 /* TodoListView.swift in Sources */,
+				5DAFFC062629931000648A22 /* MainNavigationController.swift in Sources */,
+				5DA99B682629C47F0073322E /* TodoListService.swift in Sources */,
+				5DA99B612629C2680073322E /* UITableViewDiffableDataSource.swift in Sources */,
+				5DA99B5E2629C0160073322E /* SingleSection.swift in Sources */,
+				5DA99B5B2629B06C0073322E /* UIViewExtensions.swift in Sources */,
 				5DAFFBEE26298EC500648A22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +282,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5DAFFBF126298EC500648A22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DAFFBF226298EC500648A22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5DAFFBF626298EC700648A22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DAFFC002629902100648A22 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5DAFFC012629902100648A22 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DAFFC002629902100648A22 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5DAFFBE026298EC500648A22 /* Project object */;
 }
