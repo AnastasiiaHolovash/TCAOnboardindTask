@@ -52,13 +52,13 @@ extension TodoListViewController {
           environment.update(state.todos[index])
       }
       
-    case .todoAdded(todo: let todo):
+    case .todoAdded(let todo):
       state.todos.append(todo)
       return .fireAndForget {
         environment.addTodo(todo)
       }
       
-    case .todoDeleted(todo: let todo):
+    case .todoDeleted(let todo):
       state.todos.removeAll { $0 == todo }
       return .fireAndForget {
         environment.delete(todo)

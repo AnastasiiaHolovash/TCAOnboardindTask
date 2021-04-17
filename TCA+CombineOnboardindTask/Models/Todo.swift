@@ -20,6 +20,8 @@ struct Todo: Equatable, Hashable {
 //    hasher.combine(id)
 //  }
   
-  static let initial = Todo(description: "New todo", isComplete: false)
+  static func initial() -> Todo {
+    Todo(description: "New todo", isComplete: false)
+  }
 }
 

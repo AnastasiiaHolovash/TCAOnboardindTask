@@ -9,7 +9,7 @@ import UIKit
 
 final class TodoListView: UIView {
   
-  private let tableView = UITableView()
+  let tableView = UITableView()
   private var props: [TodoTableViewCell.Props] = []
   private lazy var dataSource = makeDataSource()
   
@@ -17,7 +17,7 @@ final class TodoListView: UIView {
     super.init(frame: frame)
     setupUI()
   }
-
+  
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
@@ -37,6 +37,12 @@ final class TodoListView: UIView {
     UITableViewDiffableDataSource(tableView: tableView, cellProvider: TodoTableViewCell.cellProvider)
   }
 }
+
+//extension TodoListView: UITableViewDelegate {
+//  func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+//      return tableView.isEditing ? .delete : .none
+//  }
+//}
 
 import SwiftUI
 struct TodoListViewProvider: PreviewProvider {

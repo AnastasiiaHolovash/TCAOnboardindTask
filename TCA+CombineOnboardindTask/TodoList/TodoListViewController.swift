@@ -15,15 +15,16 @@ class TodoListViewController: UIViewController {
   private lazy var contentView = TodoListView()
   private var cancellables: Set<AnyCancellable> = []
   
+  private var addTodoButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+  private var editTodoButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
+  
   override func loadView() {
     view = contentView
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    view.backgroundColor = .systemBackground
-    
+  
     store.send(.getTodosList)
     
     store.publisher
@@ -34,6 +35,25 @@ class TodoListViewController: UIViewController {
       .sink { [unowned self] props in contentView.render(props: props) } 
       .store(in: &cancellables)
 
+    setupUI()
+  }
+  
+  private func setupUI() {
+    view.backgroundColor = .systemBackground
+    
+    let addTodoButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+    let editTodoButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
+    navigationItem.rightBarButtonItem = addTodoButton
+    navigationItem.leftBarButtonItem = editTodoButton
+  }
+  
+  @objc func addTapped() {
+    store.send(.todoAdded(todo: Todo.initial()))
+  }
+  
+  @objc func editTapped() {
+//    contentView.tableView.isEditing = true
+    
   }
 
   private func createStore() -> ViewStore<State, Action> {
