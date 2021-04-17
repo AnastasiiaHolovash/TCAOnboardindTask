@@ -16,12 +16,7 @@ struct Todo: Equatable, Hashable {
     lhs.id == rhs.id
   }
   
-//  func hash(into hasher: inout Hasher) {
-//    hasher.combine(id)
-//  }
-  
   static func initial() -> Todo {
     Todo(description: "New todo", isComplete: false)
   }
 }
-

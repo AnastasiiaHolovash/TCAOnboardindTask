@@ -14,16 +14,7 @@ final class TodoTableViewCell: UITableViewCell, BindableCell {
   private let textField = UITextField()
   private var props = Props(descriptionText: "New todo", isComplete: false, id: UUID(), descriptionChanged: nil)
   
-  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-    super.init(style: style, reuseIdentifier: reuseIdentifier)
-    setup()
-  }
-  
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-  
-  struct Props: Equatable, Hashable {
+  struct Props: Hashable {
     
     var descriptionText: String
     var isComplete: Bool
@@ -40,10 +31,19 @@ final class TodoTableViewCell: UITableViewCell, BindableCell {
     }
   }
   
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    setup()
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   func render(props: Props) {
     button.setImage(UIImage(systemName: props.isComplete ? "checkmark.square" : "square"), for: .normal)
     textField.text = props.descriptionText
-
+    
     self.props = props
   }
   
@@ -55,19 +55,24 @@ final class TodoTableViewCell: UITableViewCell, BindableCell {
     
     let horizontalStackView = UIStackView()
     horizontalStackView.axis = .horizontal
-    horizontalStackView.spacing = 10
     textField.isUserInteractionEnabled = true
-    
-    NSLayoutConstraint.activate([
-      button.widthAnchor.constraint(equalToConstant: 44)
-    ])
     
     horizontalStackView.addArrangedSubview(button)
     horizontalStackView.addArrangedSubview(textField)
     addSubview(horizontalStackView, withEdgeInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
   }
   
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    NSLayoutConstraint.activate([
+      button.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.15)
+    ])
+  }
+  
   @objc func textFieldDidChange(_ textField: UITextField) {
+    props.descriptionText = textField.text ?? ""
+    render(props: props)
     props.descriptionChanged?(textField.text ?? "")
   }
   

@@ -13,7 +13,7 @@ final class TodoListView: UIView {
   private var props: [TodoTableViewCell.Props] = []
   private lazy var dataSource = makeDataSource()
   
-  var didDeleteTodo: ((TodoTableViewCell.Props, IndexPath) -> Void)?
+  var didDeleteTodo: ((IndexPath) -> Void)?
   
   override init(frame: CGRect) {
     super.init(frame: frame)

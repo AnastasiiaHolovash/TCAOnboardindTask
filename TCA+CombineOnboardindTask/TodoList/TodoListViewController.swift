@@ -42,7 +42,7 @@ class TodoListViewController: UIViewController {
     let addTodoButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     navigationItem.rightBarButtonItem = addTodoButton
     
-    contentView.didDeleteTodo = { [weak self] item, indexPath in
+    contentView.didDeleteTodo = { [weak self] indexPath in
       if let todo = self?.store.state.todos[indexPath.row] {
         self?.store.send(.todoDeleted(todo: todo))
       }

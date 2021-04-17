@@ -9,7 +9,7 @@ import UIKit
 
 final class TableDiffableDataSource<SectionIdentifierType: Hashable, ItemIdentifierType: Hashable>: UITableViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType> {
   
-  var didDeleteItem: ((ItemIdentifierType, IndexPath) -> Void)?
+  var didDeleteItem: ((IndexPath) -> Void)?
   
   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
     return true
@@ -21,8 +21,7 @@ final class TableDiffableDataSource<SectionIdentifierType: Hashable, ItemIdentif
       
       var snapshot = self.snapshot()
       snapshot.deleteItems([model])
-      didDeleteItem?(model, indexPath)
-      
+      didDeleteItem?(indexPath)
       apply(snapshot)
     }
   }
