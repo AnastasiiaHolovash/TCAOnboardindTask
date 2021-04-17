@@ -10,13 +10,11 @@ import ComposableArchitecture
 import Combine
 
 class TodoListViewController: UIViewController {
-
+  
   lazy var store = createStore()
   private lazy var contentView = TodoListView()
-  private var cancellables: Set<AnyCancellable> = []
-  
   private var addTodoButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-  private var editTodoButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
+  private var cancellables: Set<AnyCancellable> = []
   
   override func loadView() {
     view = contentView
@@ -24,7 +22,9 @@ class TodoListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  
+    
+    setupUI()
+    
     store.send(.getTodosList)
     
     store.publisher
@@ -34,28 +34,25 @@ class TodoListViewController: UIViewController {
       .map(makeProps)
       .sink { [unowned self] props in contentView.render(props: props) } 
       .store(in: &cancellables)
-
-    setupUI()
   }
   
   private func setupUI() {
     view.backgroundColor = .systemBackground
     
     let addTodoButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
-    let editTodoButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editTapped))
     navigationItem.rightBarButtonItem = addTodoButton
-    navigationItem.leftBarButtonItem = editTodoButton
+    
+    contentView.didDeleteTodo = { [weak self] item, indexPath in
+      if let todo = self?.store.state.todos[indexPath.row] {
+        self?.store.send(.todoDeleted(todo: todo))
+      }
+    }
   }
   
   @objc func addTapped() {
     store.send(.todoAdded(todo: Todo.initial()))
   }
   
-  @objc func editTapped() {
-//    contentView.tableView.isEditing = true
-    
-  }
-
   private func createStore() -> ViewStore<State, Action> {
     let environment = Environment(addTodo: AppEnvironment.current.todoListService.add(_:),
                                   update: AppEnvironment.current.todoListService.update(_:),

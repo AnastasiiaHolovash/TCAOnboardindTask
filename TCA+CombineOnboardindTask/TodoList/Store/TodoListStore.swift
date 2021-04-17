@@ -49,7 +49,7 @@ extension TodoListViewController {
       }
       state.todos[index].description = text
       return .fireAndForget { [state] in
-          environment.update(state.todos[index])
+        environment.update(state.todos[index])
       }
       
     case .todoAdded(let todo):
@@ -76,8 +76,9 @@ extension TodoListViewController {
   
   func makeProps(state: State) -> [TodoTableViewCell.Props] {
     return store.state.todos.map { todo in
-      TodoTableViewCell.Props(descriptionText: todo.description, isComplete: todo.isComplete, id: todo.id) { [weak self] text in
-      self?.store.send(.todoTextFieldChanged(todo: todo, newText: text))
+      TodoTableViewCell.Props(descriptionText: todo.description, isComplete: todo.isComplete, id: todo.id
+      ) { [weak self] text in
+        self?.store.send(.todoTextFieldChanged(todo: todo, newText: text))
       } isCompleteChanged: { [weak self] in
         self?.store.send(.todoCheckboxTapped(todo: todo))
       }

@@ -12,6 +12,7 @@
 		5DA99B612629C2680073322E /* UITableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B602629C2680073322E /* UITableViewDiffableDataSource.swift */; };
 		5DA99B682629C47F0073322E /* TodoListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B672629C47F0073322E /* TodoListService.swift */; };
 		5DA99B6D2629E2CC0073322E /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B6C2629E2CC0073322E /* AppEnvironment.swift */; };
+		5DA99B71262B31870073322E /* TableDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA99B70262B31870073322E /* TableDiffableDataSource.swift */; };
 		5DAFFBEC26298EC500648A22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBEB26298EC500648A22 /* AppDelegate.swift */; };
 		5DAFFBEE26298EC500648A22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBED26298EC500648A22 /* SceneDelegate.swift */; };
 		5DAFFBF026298EC500648A22 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAFFBEF26298EC500648A22 /* TodoListViewController.swift */; };
@@ -34,6 +35,7 @@
 		5DA99B602629C2680073322E /* UITableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDiffableDataSource.swift; sourceTree = "<group>"; };
 		5DA99B672629C47F0073322E /* TodoListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListService.swift; sourceTree = "<group>"; };
 		5DA99B6C2629E2CC0073322E /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		5DA99B70262B31870073322E /* TableDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDiffableDataSource.swift; sourceTree = "<group>"; };
 		5DAFFBE826298EC500648A22 /* TCA+CombineOnboardindTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA+CombineOnboardindTask.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAFFBEB26298EC500648A22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DAFFBED26298EC500648A22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,12 +93,11 @@
 			isa = PBXGroup;
 			children = (
 				5DAFFC0D2629940E00648A22 /* App */,
+				5DAFFC2C2629AD4600648A22 /* Library */,
 				5DAFFC1326299ADC00648A22 /* Models */,
+				5DAFFC2F2629AD8100648A22 /* Resources */,
 				5DA99B662629C4510073322E /* Services */,
 				5DAFFC09262993B500648A22 /* TodoList */,
-				5DAFFC2C2629AD4600648A22 /* Library */,
-				5DAFFC2F2629AD8100648A22 /* Resources */,
-				5DAFFBF926298EC700648A22 /* Info.plist */,
 			);
 			path = "TCA+CombineOnboardindTask";
 			sourceTree = "<group>";
@@ -154,6 +155,7 @@
 				5DAFFC2D2629AD4A00648A22 /* Protocols */,
 				5DAFFC312629AF0600648A22 /* ViewRepresentable.swift */,
 				5DA99B5D2629C0160073322E /* SingleSection.swift */,
+				5DA99B70262B31870073322E /* TableDiffableDataSource.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 			children = (
 				5DAFFBF626298EC700648A22 /* LaunchScreen.storyboard */,
 				5DAFFBF426298EC700648A22 /* Assets.xcassets */,
+				5DAFFBF926298EC700648A22 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DAFFC272629AC3D00648A22 /* BindableCell.swift in Sources */,
+				5DA99B71262B31870073322E /* TableDiffableDataSource.swift in Sources */,
 				5DAFFBF026298EC500648A22 /* TodoListViewController.swift in Sources */,
 				5DAFFC1526299AEC00648A22 /* Todo.swift in Sources */,
 				5DAFFC1C2629A2DE00648A22 /* TodoTableViewCell.swift in Sources */,
@@ -415,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "TCA+CombineOnboardindTask/Info.plist";
+				INFOPLIST_FILE = "TCA+CombineOnboardindTask/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -433,7 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "TCA+CombineOnboardindTask/Info.plist";
+				INFOPLIST_FILE = "TCA+CombineOnboardindTask/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

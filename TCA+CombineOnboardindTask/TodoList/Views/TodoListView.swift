@@ -9,9 +9,11 @@ import UIKit
 
 final class TodoListView: UIView {
   
-  let tableView = UITableView()
+  private let tableView = UITableView()
   private var props: [TodoTableViewCell.Props] = []
   private lazy var dataSource = makeDataSource()
+  
+  var didDeleteTodo: ((TodoTableViewCell.Props, IndexPath) -> Void)?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -25,6 +27,8 @@ final class TodoListView: UIView {
   func render(props: [TodoTableViewCell.Props]) {
     dataSource.applyItems(props)
     self.props = props
+    
+    dataSource.didDeleteItem = didDeleteTodo
   }
   
   private func setupUI() {
@@ -33,16 +37,10 @@ final class TodoListView: UIView {
     addSubview(tableView, withEdgeInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
   }
   
-  private func makeDataSource() -> UITableViewDiffableDataSource<SingleSection, TodoTableViewCell.Props> {
-    UITableViewDiffableDataSource(tableView: tableView, cellProvider: TodoTableViewCell.cellProvider)
+  private func makeDataSource() -> TableDiffableDataSource<SingleSection, TodoTableViewCell.Props> {
+    TableDiffableDataSource(tableView: tableView, cellProvider: TodoTableViewCell.cellProvider)
   }
 }
-
-//extension TodoListView: UITableViewDelegate {
-//  func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-//      return tableView.isEditing ? .delete : .none
-//  }
-//}
 
 import SwiftUI
 struct TodoListViewProvider: PreviewProvider {
